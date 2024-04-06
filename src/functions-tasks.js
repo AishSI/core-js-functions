@@ -51,9 +51,7 @@ function getFunctionBody(func) {
  *
  */
 function getArgumentsCount(funcs) {
-  const res = [];
-  funcs.forEach((item) => res.push(item.length));
-  return res;
+  return funcs.map((func) => func.length);
 }
 
 /**
