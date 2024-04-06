@@ -71,7 +71,7 @@ function getArgumentsCount(funcs) {
  *
  */
 function getPowerFunction(exponent) {
-  return function (number) {
+  return function power(number) {
     return number ** exponent;
   };
 }
@@ -91,7 +91,7 @@ function getPowerFunction(exponent) {
  */
 function getPolynom(...rest) {
   if (!arguments.length) return null;
-  return function (x) {
+  return function polynom(x) {
     return rest.reduce(
       (acc, arg, index) => acc + arg * x ** (rest.length - index - 1),
       0
